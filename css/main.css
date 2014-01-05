@@ -1,0 +1,45 @@
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.jumbotron {
+  background: #EBEBE4 url(/images/ruby.png) 50% 50% !important;
+  border-bottom:  1px solid #ccc;
+  border-top:  1px solid #ccc;
+  text-align: center;
+}
+
+.jumbotron a {
+  color: #CC342D !important;
+}
+
+.jumbotron h1 {
+  color: #CC342D !important;
+}
+
+.posts .post-thumbnail {
+  padding: 0;
+}
+
+.posts .post-thumbnail img {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.posts .post {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container .main a {
+  color: #CC342D;
+}
+
+.container .main .title h2 {
+  margin: 0;
+  line-height: 20px;
+  color: #CC342D;
+  font-size: 20px;
+  font-weight: bold;
+}

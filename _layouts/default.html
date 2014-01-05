@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <header>
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">Moroccan Rubyist</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="{% if page.url == '/index.html' %}active{% endif %}"><a href="/">Home</a></li>
+                    <li class="{% if page.url == '/ruby/index.html' %}active{% endif %}"><a href="/">Ruby tutorials</a></li>
+                    <li class="{% if page.url == '/rails/index.html' %}active{% endif %}"><a href="/">Rails tutorials</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="{% if page.url == '/contribute/index.html' %}active{% endif %}"><a href="/">Contribute</a></li>
+                    <li class="{% if page.url == '/about/index.html' %}active{% endif %}"><a href="#">About</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+          
+          {% if page.url == "/index.html" %}
+            {% include welcome.html %}
+          {% endif %}
+
+          <div class="container">
+            <div class="row">
+              <div class="main col-md-8 col-sm-12 col-xs-12">
+                {{ content }}
+              </div>
+              <div class="sidebar col-md-4 hidden-sm hidden-xs">
+                
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            
+          </footer>
+        </div>
+        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    </body>
+</html>
