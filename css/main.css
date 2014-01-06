@@ -1,5 +1,5 @@
-.navbar {
-  margin-bottom: 0 !important;
+html, body {
+    height: 100%;
 }
 
 .jumbotron {
@@ -7,6 +7,7 @@
   border-bottom:  1px solid #ccc;
   border-top:  1px solid #ccc;
   text-align: center;
+  margin-bottom: 0 !important;
 }
 
 .jumbotron a {
@@ -18,7 +19,7 @@
 }
 
 .posts .post-thumbnail {
-  padding: 0;
+  padding-right: 0;
 }
 
 .posts .post-thumbnail img {
@@ -32,14 +33,100 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.site {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px #181818;
+  height: auto;
+  min-height: 100%;
+  position: relative;
+}
+
+.main-container {
+  padding-top: 51px;
+  padding-bottom: 80px;
+}
+
+.pages-container {
+  padding-top: 20px;
+}
+
 .container .main a {
   color: #CC342D;
 }
 
-.container .main .title h2 {
+.container .main .title h1 {
   margin: 0;
   line-height: 20px;
   color: #CC342D;
   font-size: 20px;
   font-weight: bold;
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+  background-color: #CC342D !important;
+  border-color: #CC342D !important;
+}
+
+.paginator {
+  text-align: center;
+}
+
+.pagination {
+  margin: 0 auto !important;
+}
+
+.footer {
+  height: 80px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #EBEBE4 url(/images/ruby.png) 50% 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer {
+  height: 150px;
+  color: #222;
+  text-shadow: 0px 1px 1px #555;
+  font-weight: bold;
+  clear: both;
+  z-index: -20;
+  text-align: center;
+}
+
+footer .footer-inner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  z-index: -15;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #333 !important;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

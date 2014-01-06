@@ -1,3 +1,4 @@
 name: Moroccan Rubyist
 markdown: redcarpet
 pygments: true
+paginate: 5

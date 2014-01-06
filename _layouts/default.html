@@ -18,7 +18,7 @@
 
         <div class="site">
           <header>
-            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
               <div class="container">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -33,37 +33,44 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                   <ul class="nav navbar-nav">
                     <li class="{% if page.url == '/index.html' %}active{% endif %}"><a href="/">Home</a></li>
-                    <li class="{% if page.url == '/ruby/index.html' %}active{% endif %}"><a href="/">Ruby tutorials</a></li>
-                    <li class="{% if page.url == '/rails/index.html' %}active{% endif %}"><a href="/">Rails tutorials</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li class="{% if page.url == '/contribute/index.html' %}active{% endif %}"><a href="/">Contribute</a></li>
-                    <li class="{% if page.url == '/about/index.html' %}active{% endif %}"><a href="#">About</a></li>
+                    <li class="{% if page.url == '/contribute/index.html' %}active{% endif %}"><a href="/contribute">Contribute</a></li>
+                    <li class="{% if page.url == '/about/index.html' %}active{% endif %}"><a href="/about">About</a></li>
                   </ul>
                 </div>
               </div>
             </nav>
           </header>
-          
-          {% if page.url == "/index.html" %}
-            {% include welcome.html %}
-          {% endif %}
 
-          <div class="container">
-            <div class="row">
-              <div class="main col-md-8 col-sm-12 col-xs-12">
-                {{ content }}
-              </div>
-              <div class="sidebar col-md-4 hidden-sm hidden-xs">
-                
+          <div class="main-container">
+            {% if page.url == "/index.html" %}
+              {% include welcome.html %}
+            {% elsif page.url == "/contribute/index.html" %}
+              {% include contribute.html %}
+            {% elsif page.url == "/about/index.html" %}
+              {% include about.html %}
+            {% endif %}
+            <div class="container pages-container">
+              <div class="row">
+                <div class="main col-md-8 col-sm-12 col-xs-12">
+                  {{ content }}
+                </div>
+                <div class="sidebar col-md-4 hidden-sm hidden-xs">
+                  
+                </div>
               </div>
             </div>
           </div>
 
-          <footer>
-            
-          </footer>
+          <div class="footer"></div>
         </div>
+        <footer>
+          <div class="footer-inner">
+            <h2>Moroccan Rubyist</h2>
+            <small>© 2014 Youssef Kababe</small> 
+          </div>
+        </footer>
         <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     </body>

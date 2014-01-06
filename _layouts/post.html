@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
+<div class="posts well">
+  <div class="post row">
+    <div class="post-thumbnail hidden-xs col-md-3 col-sm-3">
+      <img src="/images/thumbnails/{{ page.thumbnail }}">
+    </div>
+    <div class="post-infos col-md-9 col-sm-9 col-xs-12">
+      <div class="date"><small class="text-muted">{{ page.date | date_to_string }} - <strong>{{ page.author }}</strong></small></div>
+      <div class="title"><h1>{{ page.title }}</h1></div>
+      <div class="description">{{ page.description }}</div>
+    </div>
+  </div>
+  {{content}}
+  <div class="video-container">
+    <iframe src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
