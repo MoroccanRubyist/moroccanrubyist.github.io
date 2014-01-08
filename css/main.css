@@ -33,6 +33,24 @@ html, body {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.posts .fb-like {
+  padding: 20px 0 0;
+}
+
+.fb-comments,
+.fb-comments iframe[style],
+.fb-like,
+.fb-like iframe[style] {
+  width: 100% !important;
+}
+
+.fb-comments span,
+.fb-comments iframe span[style],
+.fb-like span,
+.fb-like iframe span[style] {
+  width: 100% !important;
+}
+
 .site {
   background-color: #fff;
   box-shadow: 0px 4px 15px #181818;

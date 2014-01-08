@@ -1,4 +1,6 @@
 name: Moroccan Rubyist
+description: Free Ruby and Rails tutorials for Moroccan Rubyists.
+url: http://moroccanrubyist.com
 markdown: redcarpet
 pygments: true
 paginate: 5

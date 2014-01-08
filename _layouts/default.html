@@ -5,6 +5,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="description" content="Free Ruby and Rails tutorials for Moroccan Rubyists.">
+        <meta content="{{ site.name }}" property="og:site_name">
+        {% if page.title %}
+          <meta content="{{ page.title }}" property="og:title">
+        {% else %}
+          <meta content="{{ site.name }}" property="og:title">
+        {% endif %}
+        {% if page.title %}
+          <meta content="article" property="og:type">
+        {% else %}
+          <meta content="website" property="og:type">
+        {% endif %}
+        {% if page.description %}
+          <meta content="{{ page.description }}" property="og:description">
+        {% else %}
+          <meta content="{{ site.description }}" property="og:description">
+        {% endif %}
+        {% if page.url %}
+          <meta content="{{ page.url }}" property="og:url">
+        {% endif %}
+        {% if page.date %}
+          <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+          <meta content="/about" property="article:author">
+        {% endif %}
+        {% if page.thumbnail %}
+          <meta content="/images/thumbnails/{{ page.thumbnail }}" property="og:image">
+        {% else %}
+          <meta content="/images/logo.png" property="og:image">
+        {% endif %}
+        {% if page.categories %}
+          {% for category in page.categories limit:1 %}
+          <meta content="{{ category }}" property="article:section">
+          {% endfor %}
+        {% endif %}
+        <meta property="fb:admins" content="1390697976"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- syntax highlighting CSS -->
@@ -16,55 +50,63 @@
 
     </head>
     <body>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div class="site">
-          <header>
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-              <div class="container">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="/">Moroccan Rubyist</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="{% if page.url == '/index.html' %}active{% endif %}"><a href="/">Home</a></li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li class="{% if page.url == '/contribute/index.html' %}active{% endif %}"><a href="/contribute">Contribute</a></li>
-                    <li class="{% if page.url == '/about/index.html' %}active{% endif %}"><a href="/about">About</a></li>
-                  </ul>
-                </div>
+      <div class="site">
+        <header>
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Moroccan Rubyist</a>
               </div>
-            </nav>
-          </header>
 
-          <div class="main-container">
-            {% if page.url == "/index.html" %}
-              {% include welcome.html %}
-            {% elsif page.url == "/contribute/index.html" %}
-              {% include contribute.html %}
-            {% elsif page.url == "/about/index.html" %}
-              {% include about.html %}
-            {% endif %}
-            <div class="container pages-container">
-              <div class="row">
-                <div class="main col-md-8 col-sm-12 col-xs-12">
-                  {{ content }}
-                </div>
-                <div class="sidebar col-md-4 hidden-sm hidden-xs">
-                  
-                </div>
+              <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="{% if page.url == '/index.html' %}active{% endif %}"><a href="/">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="{% if page.url == '/contribute/index.html' %}active{% endif %}"><a href="/contribute">Contribute</a></li>
+                  <li class="{% if page.url == '/about/index.html' %}active{% endif %}"><a href="/about">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <div class="main-container">
+          {% if page.url == "/index.html" %}
+            {% include welcome.html %}
+          {% elsif page.url == "/contribute/index.html" %}
+            {% include contribute.html %}
+          {% elsif page.url == "/about/index.html" %}
+            {% include about.html %}
+          {% endif %}
+          <div class="container pages-container">
+            <div class="row">
+              <div class="main col-md-8 col-sm-12 col-xs-12">
+                {{ content }}
+              </div>
+              <div class="sidebar col-md-4 hidden-sm hidden-xs">
+                
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="footer"></div>
+        <div class="footer"></div>
         </div>
         <footer>
           <div class="footer-inner">
