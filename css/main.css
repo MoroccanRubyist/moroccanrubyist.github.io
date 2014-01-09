@@ -10,6 +10,11 @@ html, body {
   margin-bottom: 0 !important;
 }
 
+.well {
+  border-radius: 0 !important;
+  background-color: #fbfbfb !important;
+}
+
 .jumbotron a {
   color: #CC342D !important;
 }
