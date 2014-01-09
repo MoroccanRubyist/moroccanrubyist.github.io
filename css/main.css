@@ -150,7 +150,7 @@ body {
     height: 100%;
 }
 
-.sidebar .adsense {
+.sidebar > div {
+  margin: 0 auto 20px !important;
   width: 300px;
-  margin: 0 auto;
 }
