@@ -11,13 +11,14 @@ layout: default
       <div class="date"><small class="text-muted">{{ page.date | date_to_string }} - <strong>{{ page.author }}</strong></small></div>
       <div class="title"><h1>{{ page.title }}</h1></div>
       <div class="description">{{ page.description }}</div>
+      <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
   </div>
   {{content}}
   <div class="video-container">
     <iframe src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="fb-like" data-href="{{site.url}}{{page.url}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+  <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
   <div class="fb-comments" data-href="{{site.url}}{{page.url}}" data-width="700" data-numposts="5" data-colorscheme="light"></div>
 </div>

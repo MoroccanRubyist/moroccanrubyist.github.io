@@ -34,7 +34,7 @@ html, body {
 }
 
 .posts .fb-like {
-  padding: 20px 0 0;
+  margin: 5px 0 0;
 }
 
 .fb-comments,
@@ -137,6 +137,7 @@ body {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
+    margin-bottom: 15px;
 }
  
 .video-container iframe,
