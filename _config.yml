@@ -4,3 +4,4 @@ url: http://moroccanrubyist.com
 markdown: redcarpet
 pygments: true
 paginate: 5
+permalink: /:categories/:title/
