@@ -4,7 +4,7 @@ title:  Introduction to Ruby programming language.
 date:   2014-01-08 22:41:00
 author: Youssef Kababe
 categories: sessions ruby
-thumbnail: intro-to-ruby.png
+thumbnail: intro-to-rb.png
 description: A simple introduction to Ruby programming language where 
   I explain some very basic usage examples of Ruby's variables and strings.
 youtube: pHtbDFpuXO8
