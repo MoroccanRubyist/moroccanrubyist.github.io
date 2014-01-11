@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Introduction to Ruby programming language.
+title:  Introduction to Ruby programming language
 date:   2014-01-08 22:41:00
 author: Youssef Kababe
 categories: sessions ruby

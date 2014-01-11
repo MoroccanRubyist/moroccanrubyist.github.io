@@ -28,7 +28,6 @@ html, body {
 }
 
 .posts .post-thumbnail img {
-  border: 1px solid #ccc;
   width: 100%;
 }
 
