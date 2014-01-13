@@ -1,0 +1,63 @@
+{% if paginator.total_pages > 1 %}
+  <div class="paginator">
+    <ul class="pagination">
+      {% if paginator.page > 4 and paginator.total_pages > 5 %}
+        <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">First</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">First</a></li>
+      {% endif %}
+
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">&laquo;</a></li>
+      {% endif %}
+      
+      {% if paginator.total_pages > 5 %}
+        {% if paginator.page > 4 and paginator.page != paginator.total_pages %}
+          {% assign start = paginator.page | minus: 3 %}
+          {% assign finish = paginator.page | plus: 1 %}
+          {% assign etc_last = paginator.total_pages | minus: 2 %}
+          <li class="disabled"><a href="#">...</a></li>
+        {% elsif paginator.page > 4 and paginator.page == paginator.total_pages %}
+          {% assign start = paginator.page | minus: 4 %}
+          {% assign finish = paginator.page %}
+          <li class="disabled"><a href="#">...</a></li>
+        {% else %}
+          {% assign start = 1 %}
+          {% assign finish = 5 %}
+          {% assign etc_last = paginator.total_pages | minus: 2 %}
+        {% endif %}
+      {% else %}
+        {% assign start = 1 %}
+        {% assign finish = paginator.total_pages %}
+      {% endif %}
+      
+      {% for page in (start..finish) %}
+        {% if page == paginator.page %}
+          <li class="active"><a href="#">{{ page }}</a></li>
+        {% elsif page == 1 %}
+          <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        {% else %}
+          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.page <= etc_last %}
+        <li class="disabled"><a href="#">...</a></li>
+      {% endif %}
+
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">&raquo;</a></li>
+      {% endif %}
+
+      {% if paginator+page <= etc_last %}
+        <li><a href="{{ site.baseurl }}page{{ paginator.total_pages }}">Last</a></li>
+      {% else %}
+        <li class="disabled"><a href="#">Last</a></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}
