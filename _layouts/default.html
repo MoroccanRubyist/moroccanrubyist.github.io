@@ -96,6 +96,26 @@
           <div class="container pages-container">
             <div class="row">
               <div class="main col-md-8 col-sm-12 col-xs-12">
+                {% if page.url != "/contribute/index.html" %}
+                <div class="alert alert-warning fade in">
+                  <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                  <h4><strong>Your contribution matters!</strong></h4>
+                  <p>
+                    <strong>Moroccan Rubyist</strong> is an open source project
+                    and anyone can contribute. We're aiming to get more people to know about
+                    <a target="_blank" href="http://ruby-lang.org">Ruby</a> and
+                    <a target="_blank" href="http://rubyonrails.org">Rails</a>,
+                    and to help the community of Moroccan Ruby developers become bigger, better and more active.
+                    Any open source project is only as good as the 
+                    community behind it. You can contribute by writing tutorials, 
+                    suggesting ideas, or simply sharing the Website. No matter what 
+                    your skill level is, every contribution counts.
+                  </p>
+                  <p>
+                    <a class="btn btn-default" style="color:#000;" href="/contribute">How to contribute</a>
+                  </p>
+                </div>
+                {% endif %}
                 {{ content }}
               </div>
               {% include sidebar.html %}
