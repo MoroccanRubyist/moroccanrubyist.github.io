@@ -2,25 +2,32 @@
 layout: default
 ---
 
-<div class="posts well">
+<div class="page well">
   <div class="post row">
     <div class="post-thumbnail hidden-xs col-md-3 col-sm-3">
       <img src="/images/thumbnails/{{ page.thumbnail }}">
     </div>
     <div class="post-infos col-md-9 col-sm-9 col-xs-12">
-      <div class="date"><small class="text-muted">{{ page.date | date_to_string }} - <strong>{{ page.author }}</strong></small></div>
+      <div class="date">
+        <small class="text-muted">
+          {{ page.date | date_to_string }} -
+          <strong><a target="_blank" href="http://github.com/{{ page.github }}">{{ page.author }}</a></strong>
+        </small>
+      </div>
       <div class="title"><h1>{{ page.title }}</h1></div>
       <div class="description">{{ page.description }}</div>
       <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
   </div>
-  {{content}}
+  <div class="post-content">
+    {{content}}
 
-  {% if page.youtube %}
-    <div class="video-container">
-      <iframe src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
-    </div>
-  {% endif %}
+    {% if page.youtube %}
+      <div class="video-container">
+        <iframe src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+  </div>
   <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
   <div class="fb-comments" data-href="{{site.url}}{{page.url}}" data-width="700" data-numposts="5" data-colorscheme="light"></div>

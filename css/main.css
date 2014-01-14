@@ -23,21 +23,36 @@ html, body {
   color: #CC342D !important;
 }
 
-.posts .post-thumbnail {
+.page .post-thumbnail {
   padding-right: 0;
 }
 
-.posts .post-thumbnail img {
+.page .post-thumbnail img {
   width: 100%;
 }
 
-.posts .post {
+.page .post {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.posts .fb-like {
+.page .date a {
+  color: #999 !important;
+}
+
+.page .post-content img {
+  max-width: 100%;
+  max-height: 400px;
+  position: relative;
+  margin: 25px auto 30px;
+  display: block;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.page .fb-like {
   margin: 5px 0 0;
 }
 
@@ -175,4 +190,16 @@ body {
 .sidebar .feed form {
   padding: 0 10px 10px 10px;
   text-align: center;
+}
+
+pre {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: auto;
+  word-break: keep-all !important;
+}
+
+pre code {
+  min-width: 700px;
 }
