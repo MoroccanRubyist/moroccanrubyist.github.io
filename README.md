@@ -1,0 +1,118 @@
+<h1>Your contribution matters!</h1>
+      <p>
+        <strong>Moroccan Rubyist</strong> is an open source project
+        and anyone can contribute. We're aiming to get more people to know about
+        <a target="_blank" href="http://ruby-lang.org">Ruby</a> and
+        <a target="_blank" href="http://rubyonrails.org">Rails</a>,
+        and to help the community of Moroccan Ruby developers become bigger, better and more active.
+        Any open source project is only as good as the 
+        community behind it. You can contribute by writing tutorials, 
+        suggesting ideas, or simply sharing the Website. No matter what 
+        your skill level is, every contribution counts.
+      </p>
+    <p>
+      So you've got an awesome idea about a tutorial. Good! This guide
+      will let you know all the things you need, and help you through the process
+      of making great tutorials for the community.
+    </p>
+
+    <h1>How this Website works?</h1>
+    <p>
+      <strong>Moroccan Rubyist</strong> is hosted on 
+      <a target="_blank" href="http://github.com">GitHub</a>
+      and lives in a public repository that anyone can see and contribute to its code.
+      So the first thing you might want to do is to
+      create a new GitHub account if you don't already have one,
+      and then fork the
+      <a target="_blank" href="https://github.com/MoroccanRubyist/moroccanrubyist.github.io">
+        Website's repository.
+      </a> 
+      You can refer back to
+      <a target="_blank" href="http://help.github.com/">GitHub Help</a> to learn more
+      about <a target="_blank" href="http://git-scm.com/">Git</a> and how to work with
+      repositories.
+    </p>
+    <img src="/images/contribution/mrrepository.png" alt="Moroccan Rubyist's GitHub repository">
+    <p>
+      <strong>Moroccan Rubyist</strong> runs on <a target="_blank" href="http://jekyllrb.com">Jekyll</a>,
+      a static Websites and blogs generator and also the main engine behind
+      <a target="_blank" href="http://pages.github.com">GitHub Pages</a>.
+      You can read a bit of
+      <a target="_blank" href="http://jekyllrb.com/docs/home/">Jekyll's documentation</a>
+      in order to have better understanding of how the parts of this Website work. But don't worry,
+      you don't have to read the whole thing to start contributing.
+    </p>
+    <img src="/images/contribution/jekyll.png" alt="Jekyll's documentation">
+
+    <h1>Writing new posts</h1>
+    <p>
+      Once you're done forking the
+      <a target="_blank" href="https://github.com/MoroccanRubyist/moroccanrubyist.github.io">
+        Website's repository
+      </a>
+      and cloning it to your local machine, you're now ready to start writing new posts.
+      As you might have noticed, the repository contains a directory called "_posts",
+      this is the directory where all posts live. Let's take a look at what's inside a post file!
+    </p>
+    {% highlight html %}
+---
+layout: post
+title:  Arrays and Hashes in Ruby
+date:   2014-01-11 06:00:00
+author: Youssef Kababe
+github: YoussefKababe
+categories: sessions ruby
+thumbnail: arrays-hashes.png
+description: Basic data structures tutorial explaining how to use Arrays, 
+  Hashes, and some of their useful methods to store and retrieve different
+  types of data.
+youtube: mRbpUm3lUKg
+---
+    {% endhighlight %}
+    <p>
+      You should have known what's this at first glance if you've already read
+      <a target="_blank" href="http://jekyllrb.com/docs/home/">Jekyll's documentation</a>!
+      Yes, it's a <a target="_blank" href="http://yaml.org/">YAML</a> front-matter block.
+      It's used to set some post variables that will be rendered by
+      <a target="_blank" href="http://jekyllrb.com">Jekyll</a> into our static HTML pages
+      using the <a target="_blank" href="http://wiki.shopify.com/Liquid">Liquid</a>
+      templating language. 
+    </p>
+    <p>
+      Your posts must always start with a block like the one above, but
+      don't forget to update those variables with your own information!
+      Spend some time making a beautiful 200x200px thumbnail picture for you post,
+      thumbnails are placed in the "/images/thumbnails" directory.
+      You can include one Youtube video in your post. If you don't want that, you should
+      remove the "youtube" variable from the front-matter block.
+    </p>
+    <p>
+      The rest of your post can be written in either
+      <a target="_blank" href="http://daringfireball.net/projects/markdown/">Markdown</a> or
+      <a target="_blank" href="http://textile.sitemonks.com/">Textile</a>, use the one you feel more
+      comfortable with. You may come to some places in your tutorial where you'll want
+      to include some code snippets, you can do this by writing your code between those two
+      <a target="_blank" href="http://wiki.shopify.com/Liquid">Liquid</a> tags:
+    </p>
+    <img src="/images/contribution/syntaxtags.png" alt="Liquid syntax highlighting tags">
+    <p>
+      You may also want to include some images, just create a new directory for you post's
+      images inside "/images" directory and drop them all there. Then use your preferred markup
+      language to include them.
+    </p>
+    <p>
+      Finally, your post's filename must be in a special format so that 
+      <a target="_blank" href="http://jekyllrb.com">Jekyll</a>
+      can render it properly. So make sure to name your post like this:
+    </p>
+    {% highlight html %}
+YEAR-MONTH-DAY-title.MARKUP
+
+Examples:
+  2011-12-31-new-years-eve-is-awesome.markdown
+  2012-09-12-how-to-write-a-blog.textile
+    {% endhighlight %}
+    <p>
+      You're good to go now. It's time to start writing your next greatest tutorial!
+      I'll be waiting for your pull requests :)
+    </p>
