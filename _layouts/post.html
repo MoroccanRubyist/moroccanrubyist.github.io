@@ -20,13 +20,13 @@ layout: default
     </div>
   </div>
   <div class="post-content">
-    {{content}}
-
     {% if page.youtube %}
+      <h3>Video tutorial</h3>
       <div class="video-container">
         <iframe src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
       </div>
     {% endif %}
+    {{content}}
   </div>
   <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
