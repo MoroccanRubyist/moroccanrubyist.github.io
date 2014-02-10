@@ -3,8 +3,6 @@
     <ul class="pagination">
       {% if paginator.page > 4 and paginator.total_pages > 5 %}
         <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">First</a></li>
-      {% else %}
-        <li class="disabled"><a href="#">First</a></li>
       {% endif %}
 
       {% if paginator.previous_page %}
@@ -55,8 +53,6 @@
 
       {% if paginator+page <= etc_last %}
         <li><a href="{{ site.baseurl }}page{{ paginator.total_pages }}">Last</a></li>
-      {% else %}
-        <li class="disabled"><a href="#">Last</a></li>
       {% endif %}
     </ul>
   </div>
