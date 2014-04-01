@@ -3,28 +3,29 @@ html, body {
 }
 
 .jumbotron {
-  background: #EBEBE4 url(/images/ruby.png) 50% 50% !important;
+  background: #EBEBE4 url(/images/ruby.png) 50% 50%;
   border-bottom:  1px solid #ccc;
   border-top:  1px solid #ccc;
   text-align: center;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 .well {
-  border-radius: 0 !important;
-  background-color: #fbfbfb !important;
+  border-radius: 0;
+  background-color: #fbfbfb;
 }
 
 .jumbotron a {
-  color: #CC342D !important;
+  color: #CC342D;
 }
 
 .jumbotron h1 {
-  color: #CC342D !important;
+  color: #CC342D;
 }
 
 .page .post-thumbnail {
   padding-right: 0;
+  width: 150px;
 }
 
 .page .post-thumbnail img {
@@ -53,21 +54,7 @@ html, body {
 }
 
 .page .fb-like {
-  margin: 5px 0 0;
-}
-
-.fb-comments,
-.fb-comments iframe[style],
-.fb-like,
-.fb-like iframe[style] {
-  width: 100% !important;
-}
-
-.fb-comments span,
-.fb-comments iframe span[style],
-.fb-like span,
-.fb-like iframe span[style] {
-  width: 100% !important;
+  margin: 5px 0 5px;
 }
 
 .site {
@@ -85,6 +72,12 @@ html, body {
 
 .pages-container {
   padding-top: 20px;
+}
+
+@media (min-width: 1200px) {
+  .container .main {
+    width: 72%;
+  }
 }
 
 .container .main a {
@@ -105,8 +98,8 @@ html, body {
 .pagination>.active>span:hover,
 .pagination>.active>a:focus,
 .pagination>.active>span:focus {
-  background-color: #CC342D !important;
-  border-color: #CC342D !important;
+  background-color: #CC342D;
+  border-color: #CC342D;
 }
 
 .paginator {
@@ -114,7 +107,7 @@ html, body {
 }
 
 .pagination {
-  margin: 0 auto !important;
+  margin: 0 auto;
 }
 
 .footer {
@@ -149,7 +142,7 @@ footer .footer-inner {
 }
 
 body {
-  background-color: #333 !important;
+  background-color: #333;
 }
 
 .video-container {
@@ -169,8 +162,15 @@ body {
     height: 100%;
 }
 
+.sidebar {
+  width: 315px;
+  float: right;
+  padding-left: 0;
+}
+
 .sidebar > div {
-  margin: 0 auto 20px !important;
+  margin-bottom: 20px;
+  float: right;
   width: 300px;
 }
 
@@ -193,11 +193,11 @@ body {
 }
 
 pre {
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
+  padding: 0;
+  border: none;
+  border-radius: 0;
   overflow: auto;
-  word-break: keep-all !important;
+  word-break: keep-all;
 }
 
 pre code {
