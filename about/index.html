@@ -3,6 +3,27 @@ layout: default
 title: Moroccan Rubyist | About
 ---
 
-<div class="alert alert-info">
-  Want to know more about me? Okay just be patient, we'll get to know each other soon :)
+<div class="contributors-page">
+  <div class="row">
+    {% for member in site.data.contributors %}
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="contributor-box">
+          <div class="contributor">
+            <img src="/images/contributors/{{ member.picture }}" alt="" class="img-thumbnail">
+            <div>
+              <h3 class="contributor-name lead">{{ member.name }}</h3>
+              <div class="social-icons">
+                <a target="_blank" href="https://github.com/{{ member.github }}"><i class="icon-github"></i></a>
+                <a target="_blank" href="https://www.facebook.com/{{ member.facebook }}"><i class="icon-facebook"></i></a>
+                <a href="mailto:{{ member.email }}"><i class="icon-envelope"></i></a>
+              </div>
+            </div>
+            <div class="bio">
+              <p>{{ member.bio }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
