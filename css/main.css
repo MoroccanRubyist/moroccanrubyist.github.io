@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('/fonts/icomoon.eot?-snq618');
+  src:url('/fonts/icomoon.eot?#iefix-snq618') format('embedded-opentype'),
+    url('/fonts/icomoon.woff?-snq618') format('woff'),
+    url('/fonts/icomoon.ttf?-snq618') format('truetype'),
+    url('/fonts/icomoon.svg?-snq618#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+  content: "\e600";
+}
+.icon-facebook:before {
+  content: "\e601";
+}
+.icon-github:before {
+  content: "\e602";
+}
+
 html, body {
     height: 100%;
 }
@@ -202,4 +237,48 @@ pre {
 
 pre code {
   min-width: 700px;
+}
+
+.contributors-page .contributor-box {
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+
+.contributors-page .contributor {
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.contributors-page .contributor img {
+  position: relative; 
+  width: 100px;
+  left: 10px;
+  top: -40px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: -35px;
+}
+
+.contributors-page .contributor .contributor-name {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contributors-page .contributor .social-icons a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contributors-page .contributor .social-icons i {
+  margin-right: 10px;
+}
+
+.contributors-page .contributor .bio {
+  clear: both;
+}
+
+.contributors-page .contributor .bio p {
+  margin-top: 20px;
+  margin-bottom: 0;
 }

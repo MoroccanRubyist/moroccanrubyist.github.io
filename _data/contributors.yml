@@ -3,25 +3,18 @@
   facebook: youssefkababe
   email: youssef.kbe@gmail.com
   picture: youssefkababe.png
+  bio: Ruby/Rails developer and founder of Moroccan Rubyist.<br> I spend most of my time wondering what I'm doing in front of a 15 inch laptop screen.
+
+- name: Zakaria Boualaid
+  github: zakariaboualaid
+  facebook: zakaria.boulaid
+  email: boulaidzac@gmail.com
+  picture: zakariaboualaid.png
   bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, iure quisquam debitis cupiditate cum autem.
 
-- name: Youssef Kababe
-  github: youssefkababe
-  facebook: youssefkababe
-  email: youssef.kbe@gmail.com
-  picture: youssefkababe.png
-  bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, iure quisquam debitis cupiditate cum autem.
-
-- name: Youssef Kababe
-  github: youssefkababe
-  facebook: youssefkababe
-  email: youssef.kbe@gmail.com
-  picture: youssefkababe.png
-  bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, iure quisquam debitis cupiditate cum autem.
-
-- name: Youssef Kababe
-  github: youssefkababe
-  facebook: youssefkababe
-  email: youssef.kbe@gmail.com
-  picture: youssefkababe.png
+- name: Mustapha Alaouy
+  github: alaouy
+  facebook: alaouy
+  email: alaouym@gmail.com
+  picture: mustaphaalaouy.png
   bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, iure quisquam debitis cupiditate cum autem.
