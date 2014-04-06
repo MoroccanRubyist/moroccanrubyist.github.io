@@ -135,6 +135,7 @@ html, body {
 .pagination>.active>span:focus {
   background-color: #CC342D;
   border-color: #CC342D;
+  color: #fff;
 }
 
 .paginator {
