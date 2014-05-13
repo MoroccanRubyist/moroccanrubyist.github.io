@@ -37,6 +37,10 @@ html, body {
     height: 100%;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .jumbotron {
   background: #EBEBE4 url(/images/ruby.png) 50% 50%;
   border-bottom:  1px solid #ccc;
@@ -115,7 +119,6 @@ a:hover {
 }
 
 .main-container {
-  padding-top: 51px;
   padding-bottom: 80px;
 }
 
@@ -123,16 +126,44 @@ a:hover {
   padding-top: 20px;
 }
 
-@media (min-width: 1200px) {
+.video {
+  padding: 5px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+@media (min-width: 992px) {
   .container .page,
   .contributors-page {
-    width: 72%;
+    width: 65%;
     min-height: 970px;
     border-right: 1px solid #e3e3e3;
   }
 
   .container .sidebar {
-    width: 28%;
+    width: 35%;
+  }
+
+  .video {
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container .page,
+  .contributors-page {
+    width: 70%;
+    min-height: 970px;
+    border-right: 1px solid #e3e3e3;
+  }
+
+  .container .sidebar {
+    width: 30%;
+  }
+
+  .video {
+    padding: 25px;
+    border-bottom: 1px solid #e3e3e3;
   }
 }
 
@@ -201,8 +232,6 @@ body {
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-    margin-bottom: 15px;
 }
  
 .video-container iframe,
