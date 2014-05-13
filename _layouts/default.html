@@ -98,8 +98,7 @@
           {% endif %}
           <div class="container pages-container">
             <div class="row">
-              <div class="main col-md-8 col-sm-12 col-xs-12">
-                {% if page.url != "/contribute/index.html" %}
+              {% if page.url != "/contribute/index.html" %}
                 <div class="alert alert-warning fade in">
                   <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
                   <h4><strong>Your contribution matters!</strong></h4>
@@ -119,9 +118,10 @@
                   </p>
                 </div>
                 {% endif %}
+              <div class="main well col-md-12 col-sm-12 col-xs-12">
                 {{ content }}
+                {% include sidebar.html %}
               </div>
-              {% include sidebar.html %}
             </div>
           </div>
         </div>

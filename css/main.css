@@ -47,15 +47,26 @@ html, body {
 
 .well {
   border-radius: 0;
-  background-color: #fbfbfb;
+  box-shadow: none;
+  background-color: #fff;
 }
 
-.jumbotron a {
+a {
+  color: #CC342D;
+}
+
+a:hover {
   color: #CC342D;
 }
 
 .jumbotron h1 {
   color: #CC342D;
+}
+
+.page {
+  border-right: 1px solid #e3e3e3;
+  padding-top: 15px;
+  background-color: #fbfbfb;
 }
 
 .page .post-thumbnail {
@@ -100,6 +111,10 @@ html, body {
   position: relative;
 }
 
+.main {
+  padding: 0;
+}
+
 .main-container {
   padding-top: 51px;
   padding-bottom: 80px;
@@ -110,13 +125,13 @@ html, body {
 }
 
 @media (min-width: 1200px) {
-  .container .main {
+  .container .page {
     width: 72%;
   }
-}
 
-.container .main a {
-  color: #CC342D;
+  .container .sidebar {
+    width: 28%;
+  }
 }
 
 .container .main .title h1 {
@@ -199,15 +214,13 @@ body {
 }
 
 .sidebar {
-  width: 315px;
-  float: right;
-  padding-left: 0;
+  padding-top: 15px;
+  background-color: #fff;
 }
 
 .sidebar > div {
-  margin-bottom: 20px;
-  float: right;
   width: 300px;
+  margin: 0 auto 20px;
 }
 
 .sidebar .feed {
