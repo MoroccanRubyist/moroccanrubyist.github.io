@@ -64,7 +64,6 @@ a:hover {
 }
 
 .page {
-  border-right: 1px solid #e3e3e3;
   padding-top: 15px;
   background-color: #fbfbfb;
 }
@@ -125,8 +124,11 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
-  .container .page {
+  .container .page,
+  .contributors-page {
     width: 72%;
+    min-height: 970px;
+    border-right: 1px solid #e3e3e3;
   }
 
   .container .sidebar {
@@ -251,6 +253,10 @@ pre {
 
 pre code {
   min-width: 700px;
+}
+
+.contributors-page {
+  border-right: 1px solid #e3e3e3;
 }
 
 .contributors-page .contributor-box {
