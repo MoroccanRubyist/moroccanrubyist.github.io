@@ -10,9 +10,3 @@ description: A simple introduction to Ruby programming language where
   I explain some very basic usage examples of Ruby's variables and strings.
 youtube: pHtbDFpuXO8
 ---
-
-### What you'll learn?
-* Basic Ruby instructions and operators
-* Variables declaration and assignments
-* Basic strings manipulation  
-* Defining functions

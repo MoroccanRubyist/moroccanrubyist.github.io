@@ -10,8 +10,3 @@ description: In this tutorial I will introduce you the fundamentals of working w
   basic control structures in Ruby.
 youtube: riOqtBg0sH8
 ---
-
-### What you'll learn?
-* Using the if, elsif and else statements
-* Using unless statement
-* Looping with the while and until statements

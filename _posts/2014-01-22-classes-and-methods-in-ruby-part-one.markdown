@@ -10,10 +10,3 @@ description: In this tutorial we will understand how to work with classes and me
   object-oriented programming.
 youtube: 7FV5C2To6nQ
 ---
-
-### What you'll learn?
-* What is an object-oriented programming language and it's features.
-* Definition of "class" and "object", and how to use classes in Ruby.
-* Using methods, constructor, accessors and self class's method.
-* Some variables's types in a class.
-* Scope of variables.

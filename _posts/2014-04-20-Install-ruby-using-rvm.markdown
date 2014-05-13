@@ -9,7 +9,3 @@ thumbnail: install-rvm.png
 description: A simple tutorial on how to install multiple Ruby versions using RVM and how to separate your projects' gems using 	RVM gemsets.
 youtube: 8qTTz41vL-k
 ---
-
-### What you'll learn?
-* How to install and use multiple versions of Ruby using RVM
-* How to make project-specific gemsets
