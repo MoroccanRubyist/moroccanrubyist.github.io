@@ -127,7 +127,7 @@ a:hover {
 }
 
 .video {
-  padding: 5px;
+  padding: 15px;
   border-bottom: 1px solid #e3e3e3;
 }
 
@@ -142,28 +142,18 @@ a:hover {
   .container .sidebar {
     width: 35%;
   }
-
-  .video {
-    padding: 20px;
-    border-bottom: 1px solid #e3e3e3;
-  }
 }
 
 @media (min-width: 1200px) {
   .container .page,
   .contributors-page {
-    width: 70%;
+    width: 71%;
     min-height: 970px;
     border-right: 1px solid #e3e3e3;
   }
 
   .container .sidebar {
-    width: 30%;
-  }
-
-  .video {
-    padding: 25px;
-    border-bottom: 1px solid #e3e3e3;
+    width: 29%;
   }
 }
 
