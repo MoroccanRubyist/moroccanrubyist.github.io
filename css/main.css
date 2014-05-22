@@ -322,16 +322,29 @@ pre code {
   margin-bottom: 0;
 }
 
-.navbar-form {
-  margin-right: 5px !important;
-}
-
 #st-search-input {
   border-radius: 0;
-  background-color: #EBEBE4;
+  background-color: #222222;
+  border-color: #222222; 
+  color: #fff;
+  width: 70px;
+  transition: width .5s;
+  -webkit-transition: width .5s;
 }
 
 #st-search-input:focus {
   box-shadow: none;
   border-color: #EBEBE4;
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  #st-search-input {
+    width: 100%;
+    border-color: #EBEBE4;
+  }
+
+  #st-search-input:focus {
+    width: 100%;
+  }
 }
