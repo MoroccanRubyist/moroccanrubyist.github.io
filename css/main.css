@@ -321,3 +321,17 @@ pre code {
   margin-top: 20px;
   margin-bottom: 0;
 }
+
+.navbar-form {
+  margin-right: 5px !important;
+}
+
+#st-search-input {
+  border-radius: 0;
+  background-color: #EBEBE4;
+}
+
+#st-search-input:focus {
+  box-shadow: none;
+  border-color: #EBEBE4;
+}
